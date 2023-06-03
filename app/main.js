@@ -1,4 +1,3 @@
-const elementoParaInserir = document.getElementById('livros');
 const endPointDaApi = 'https://guilhermeonrails.github.io/casadocodigo/livros.json';
 async function getBuscarLivrosDaApi(){
     const res = await fetch(endPointDaApi);
@@ -6,5 +5,4 @@ async function getBuscarLivrosDaApi(){
     let livrosComDesconto = aplicarDesconto(livros);
     exibirOsLivrosNaTela(livrosComDesconto);
 }
-
 getBuscarLivrosDaApi();
